@@ -4,7 +4,11 @@
 
 1. Sign up for an [IBM Cloud account](https://console.bluemix.net/registration/).
 1. Download the [IBM Cloud CLI](https://console.bluemix.net/docs/cli/index.html#overview).
-1. Download the github folder.
+1. Download/clone the github folder.
+1. In the application folder, copy the *.env.example* file and create a file called *.env*
+    ```
+    cp .env.example .env
+    ```
 
 ## Create an IoT app in the IBM Cloud
 
@@ -16,15 +20,11 @@
 1. Click Launch to open the Watson IoT Platform dashboard
 1. The IBM Watson IoT Platform dashboard is displayed, which is a service that is independent of the IBM Cloud. An organization ID is assigned to your app, and you will need this ID later when developing the app.
 1. On the left menu, which pops out when you hover over it, click o Apps. 
-1. Create an API keu for standard application, copy the authentication key and token and paste it in the server.js file as shown below. Change the organisation name to your organisation ID. 
+1. Create an API key for standard application, copy the authentication key and token and paste it in the env file as shown below.
 ```
-var appClientConfig = {
-  "org" : '{your_organisation}',
-  "id" : (Math.floor((Math.random() * 1000) + 1)).toString(),
-  "domain" : "internetofthings.ibmcloud.com",
-  "auth-key" : '{your_auth_key}', //generate the key and token by using add api key on iot platform
-  "auth-token" : '{your_auth_token}'
-}
+IOT_PLATFORM_ORG={your_organisation_id}
+IOT_AUTH_KEY={iot_platform_authentication_key}
+IOT_AUTH_TOKEN={iot_platform_authntication_token}
 ```
 
 ## Add a device that will send MQTT messages to the Watson IoT Platform
@@ -57,9 +57,9 @@ var appClientConfig = {
 1. Navigate to the catalog and search for Visual Recognition under watson services.
 2. Create an instance of the same.
 3. On the left menu, navigate to service credentials and create new credentials.
-4. copy the apikey and paste it in the server.js file for the visual recognition server as shown below
+4. copy the apikey and paste it in the env file for the visual recognition server as shown below
 ```
-iam_apikey: 'API-KEY'
+VISUAL_RECOGNITION_IAM_APIKEY={your_visual_recognition_key}
 ```
 ## Create the node red flow for a dashboard
 
@@ -83,18 +83,21 @@ In this section, you will enhance your IBM Cloud IoT app by using a Node-RED flo
 16. Click on the new tab icon and you will see the dashboard opening up in a new tab.
 17. You will see the temperature data being visualized using the guage. 
 
-## Configuring the application
+## Running locally
 
-1. In the application folder, copy the *.env.example* file and create a file called *.env*
+1. Install the dependencies
 
     ```
-    cp .env.example .env
+    npm install
     ```
 
-2. Open the *.env* file and add the service credentials that you obtained in the previous step.
+1. Run the application
+
     ```
-    VISUAL_RECOGNITION_IAM_APIKEY=X4rbi8vwZmKpXfowaS3GAsA7vdy17Qh7km5D6EzKLHL2
+    npm start
     ```
+
+1. View the application in a browser at `localhost:8080`
 
 
 ## Deploying to IBM Cloud as a Cloud Foundry Application
@@ -113,8 +116,6 @@ In this section, you will enhance your IBM Cloud IoT app by using a Node-RED flo
 
 1. Edit the *manifest.yml* file. Change the **name** field to something unique.  
   For example, `- name: my-app-name`.
-  
-1. Change the websocket link in sensor.js and sensorMotion.js to wss://my-app-name.mybluemix.net
   
 1. Deploy the application.
 
