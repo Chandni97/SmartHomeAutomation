@@ -1,5 +1,12 @@
-var socket = new WebSocket('ws://localhost:8080');
-//var socket = new WebSocket('wss://'+window.location.hostname);
+var socket;
+if(window.location.hostname == 'localhost')
+{
+	socket = new WebSocket('ws://localhost:8080');
+}
+else
+{
+	socket = new WebSocket('wss://'+window.location.hostname);
+}
 var myData={'name' : 'foo', 'cpu' : 60, 'mem' : 50};
 
 socket.onopen = function() 
