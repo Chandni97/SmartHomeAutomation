@@ -1,0 +1,5 @@
+applications:
+- name: SmartHomeDashboard
+  path: .
+  command: npm start
+  memory: 768M

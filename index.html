@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Smart Home</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <script src="sensor.js" type="text/javascript"></script>
+  </head>
+
+  <style media="screen">
+      body {
+        background: #101010;
+        font-family: "Arial Black";
+        font-weight: 200;
+        text-align: center;
+        color: #000000;
+      }
+
+      .mainView{
+      }     
+
+       .topbar{
+        background-color: rgba(174, 94, 255, 0.88);
+        color: #eeeff0;
+        width: 100%;
+        margin-bottom: 30px;
+        /* padding: 5px; */
+        padding: 10px 25px;
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .container {
+        perspective: 300;
+        -webkit-perspective: 300;
+         
+      }
+        
+
+      #stream
+      {
+      }
+
+      #imgLogo {
+        width: 275px;
+        margin-left: auto;
+        margin-right: 15px;
+        display: block;
+        padding: 15px;
+
+      }
+
+
+    </style>
+
+  <body>
+    
+<div class="mainView">
+    <div class="topbar">
+      <div id="topbar-text"><span id="doodle_draw"></span> </div>
+      
+      <h1> Smart Home </h1>
+      <div id="clock" class="text-blink">
+        <div id="clock-time"><span id="timeLeft"></span></div>
+      </div>
+    </div>
+    <p><video autoplay style="height: 460px; width: 580px;"></video></p>
+    <p><img id="imageTag" width="580" height="460"></p>
+  </div>  
+  </body>
+</html>
