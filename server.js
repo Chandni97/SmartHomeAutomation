@@ -104,7 +104,7 @@ server1.on('connection', socket => {
 
  // socket.send('Hello world!');
  socket.addEventListener('message', event => {
-  console.log(`Message from client: ${event.data}`)
+  //console.log(`Message from client: ${event.data}`)
   if(`${event.data}`[0] === '{')
   {
     appClient.publishDeviceEvent("Motion","1234M", "myEvent", "json", JSON.parse(`${event.data}`));
