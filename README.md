@@ -19,7 +19,7 @@
 1. In the Overview view of your app, under Connections, click the Internet of Things Platform service.
 1. Click Launch to open the Watson IoT Platform dashboard
 1. The IBM Watson IoT Platform dashboard is displayed, which is a service that is independent of the IBM Cloud. An organization ID is assigned to your app, and you will need this ID later when developing the app.
-1. On the left menu, which pops out when you hover over it, click o Apps. 
+1. On the left menu, which pops out when you hover over it, click on Apps. 
 1. Create an API key for standard application, copy the authentication key and token and paste it in the env file as shown below.
 ```
 IOT_PLATFORM_ORG={your_organisation_id}
@@ -33,7 +33,7 @@ IOT_AUTH_TOKEN={iot_platform_authntication_token}
 2. Click Next. A page is displayed where you can enter metadata about the device type, such as a serial number or model. You don’t need to specify this information for this demo. Just click Done.
 3. Provide a value for the authentication token or auto-generate it. Then, click Next. 
 4. Create a device similarly with device type as Temperature and id as '1234T' which we will use for simulation of temperature.
-5. Create anoter device with device type as Light and id as '1234L' which will be used to control the smart lights through the app.
+5. Create anoter device with device type as Light and Door and id as '1234L' and '1234D' respectively to be used to control the smart lights through the app.
 
 ## Simulate a device that will send MQTT messages to the Watson IoT Platform
 
