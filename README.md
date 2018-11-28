@@ -83,7 +83,7 @@ In this section, you will enhance your IBM Cloud IoT app by using a Node-RED flo
 16. Click on the new tab icon and you will see the dashboard opening up in a new tab.
 17. You will see the temperature data being visualized using the guage. 
 
-## Running locally
+## Running the application
 
 1. Install the dependencies
 
@@ -100,8 +100,25 @@ In this section, you will enhance your IBM Cloud IoT app by using a Node-RED flo
 1. View the application in a browser at `localhost:8080`
 
 
-## Deploying to IBM Cloud as a Cloud Foundry Application
+## Get the accelerometer data from the android application
 
+1. On your phone, go to Settings > Security. Under Device Administration, enable Unknown sources. Now you can install .apk files from outside of Google Play.
+
+1. Open the browser on your phone, and enter this URL:
+
+1. https://github.com/deveops/iot-starter-for-android/releases 
+
+1. Search for the iotstarter-v2.1.0.apk link, and click the link to download the .apk file. Click the downloaded file, and confirm that you want to install the app. 
+
+1. Start the IoT Starter app.
+
+1. Click Skip tutorial.
+
+1. Enter the following parameters: Organization: The organization ID that was displayed on the IBM IoT server (at the start of ” “). For example, mgso1i in this tutorial. Device ID: The device ID that you configured, at the end of ” .” For example, “112233445566” in this tutorial. Auth Token: The authorization token that you specified in ” .” Check Use SSL. 
+
+1. Click Activate Sensor. Now the app collects data from the acceleration sensor in your smartphone and sends the data to the IBM IoT server
+
+### Deploy the web application to ibm cloud
 1. Login to IBM Cloud with the [IBM Cloud CLI](https://console.bluemix.net/docs/cli/index.html#overview).
 
     ```
@@ -127,7 +144,5 @@ In this section, you will enhance your IBM Cloud IoT app by using a Node-RED flo
 For example: https://my-app-name.mybluemix.net
 
 1. The front camera will take picture every 15 seconds and if a person is detected, you will be notified on your node red dashboard. You can use the switch on the dashboard to send commands to the pc to switch on/off the lights.
-
-1. Visit the application url for motion sensor at : https://my-app-name.mybluemix.net/motion from the device that has the sensor. For example your smart phone. You will be able to see the motion changes in a graph on the dashboard. 
 
 
