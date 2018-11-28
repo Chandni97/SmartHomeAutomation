@@ -29,8 +29,8 @@ IOT_AUTH_TOKEN={iot_platform_authntication_token}
 
 ## Add a device that will send MQTT messages to the Watson IoT Platform
 
-1. On the left menu, which pops out when you hover over it, click Devices. Then, click Add a device type. In your organization, you can have multiple device types each with multiple devices. A device type is a group of devices that share characteristics; for example, they might provide the same sensor data. In our case, the device type name must be “Android” (this device type name is required by the app that you will use later). Enter the device ID. The device ID can be, for example, the MAC address of your smartphone. However, it must be unique within your organization only. For this application keep it '1234M'
-2. Click Next. A page is displayed where you can enter metadata about the device type, such as a serial number or model. You don’t need to specify this information for this demo. Just click Done.
+1. On the left menu, which pops out when you hover over it, click Devices. Then, click Add a device type. In your organization, you can have multiple device types each with multiple devices. A device type is a group of devices that share characteristics; for example, they might provide the same sensor data. In our case, the device type name must be “Android” (this device type name is required by the app that you will use later). Enter the device ID. The device ID can be, for example, the MAC address of your smartphone. However, it must be unique within your organization only. For this application keep it '1234M'. Make note of the authorization token.
+2. Click Next. A page is displayed where you can enter metadata about the device type, such as a serial number or model. You don’t need to specify this information for this demo. Just click Done. 
 3. Provide a value for the authentication token or auto-generate it. Then, click Next. 
 4. Create a device similarly with device type as Temperature and id as '1234T' which we will use for simulation of temperature.
 5. Create anoter device with device type as Light and Door and id as '1234L' and '1234D' respectively to be used to control the smart lights through the app.
