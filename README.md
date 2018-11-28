@@ -83,6 +83,19 @@ In this section, you will enhance your IBM Cloud IoT app by using a Node-RED flo
 16. Click on the new tab icon and you will see the dashboard opening up in a new tab.
 17. You will see the temperature data being visualized using the guage. 
 
+## Configuring the application
+
+1. In the application folder, copy the *.env.example* file and create a file called *.env*
+
+    ```
+    cp .env.example .env
+    ```
+
+2. Open the *.env* file and add the service credentials that you obtained in the previous step.
+    ```
+    VISUAL_RECOGNITION_IAM_APIKEY=X4rbi8vwZmKpXfowaS3GAsA7vdy17Qh7km5D6EzKLHL2
+    ```
+
 
 ## Deploying to IBM Cloud as a Cloud Foundry Application
 
