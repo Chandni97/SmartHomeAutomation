@@ -52,7 +52,7 @@ IOT_AUTH_TOKEN={iot_platform_authntication_token}
 8. Click use regsitered device and select the device id. In this case it will be '1234T'
 9. You should be able  to see the published events under the device type.
 
-## Create an instance of Visual Recongnition Service
+## Create an instance of Visual Recognition Service
 
 1. Navigate to the catalog and search for Visual Recognition under watson services.
 2. Create an instance of the same.
