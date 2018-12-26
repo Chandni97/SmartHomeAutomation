@@ -58,7 +58,7 @@ function getStream() {
     var mediaControl = document.querySelector('video');
     if ('srcObject' in mediaControl) {
       mediaControl.srcObject = stream;
-      mediaControl.src = (window.URL || window.webkitURL).createObjectURL(stream);
+      //mediaControl.src = (window.URL || window.webkitURL).createObjectURL(stream); => deprecated on google
     } else if (navigator.mozGetUserMedia) {
       mediaControl.mozSrcObject = stream;
     }
